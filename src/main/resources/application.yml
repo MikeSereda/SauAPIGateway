@@ -13,9 +13,8 @@ spring:
         - id: boot_greet
           uri: lb://saurestboot
           predicates:
-            - Path=/api/v1/greet
+            - Path=/api/v1/greet,/swagger-ui/**,/v3/api-docs/**
             - Method=GET
-
 
 eureka:
   client:
