@@ -1,0 +1,23 @@
+server:
+  port: 7005
+spring:
+  application:
+    name: sau_api_gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+        - id: boot_greet
+          uri: lb://saurestboot
+          predicates:
+            - Path=/api/v1/greet
+            - Method=GET
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7003/eureka
