@@ -10,6 +10,14 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
+      routes:
+        - id: popups
+          uri: lb://saurestboot
+          predicates:
+            - Path=/popups
+            - Method=GET
+          filters:
+            - RewritePath=/popups, /api/v1/popups
 springdoc:
   swagger-ui:
     urls:
