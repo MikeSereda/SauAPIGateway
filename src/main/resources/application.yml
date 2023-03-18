@@ -18,6 +18,15 @@ spring:
             - Method=GET
           filters:
             - RewritePath=/popups, /api/v1/popups
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:63342"
+            allowedHeaders: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - DELETE
 springdoc:
   swagger-ui:
     urls:
