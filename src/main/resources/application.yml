@@ -21,7 +21,10 @@ spring:
       globalcors:
         cors-configurations:
           '[/**]':
-            allowedOrigins: "http://localhost:63342"
+            allowedOrigins:
+              - "http://192.168.100.1"
+              - "http://192.168.100.1:80"
+              - "localhost"
             allowedHeaders: "*"
             allowedMethods:
               - GET
@@ -43,4 +46,4 @@ springdoc:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:7003/eureka
+      defaultZone: http://192.168.100.1:7003/eureka

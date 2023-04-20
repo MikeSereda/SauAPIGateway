@@ -10,7 +10,7 @@
     </parent>
     <groupId>ru.sereda</groupId>
     <artifactId>SauAPIGateway</artifactId>
-    <version>0.1b</version>
+    <version>0.1c</version>
     <name>SauAPIGateway</name>
     <description>SauAPIGateway</description>
     <properties>
